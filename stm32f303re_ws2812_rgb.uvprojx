@@ -399,6 +399,26 @@
               <FileType>5</FileType>
               <FilePath>.\pll.h</FilePath>
             </File>
+            <File>
+              <FileName>tim17.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tim17.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim17.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tim17.h</FilePath>
+            </File>
+            <File>
+              <FileName>ws2812b.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ws2812b.c</FilePath>
+            </File>
+            <File>
+              <FileName>ws2812b.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ws2812b.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

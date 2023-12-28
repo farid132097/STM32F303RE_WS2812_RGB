@@ -27,13 +27,19 @@ Project File Date:  12/28/2023
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-assembling startup_stm32f303xe.s...
-main.c(2): warning: In file included from...
+pll.c(3): warning: In file included from...
 C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
   SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
                                   ^~
 1 warning generated.
-compiling main.c...
+compiling pll.c...
+assembling startup_stm32f303xe.s...
+tim17.c(2): warning: In file included from...
+C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+1 warning generated.
+compiling tim17.c...
 RTE/Device/STM32F303RETx/system_stm32f3xx.c(70): warning: In file included from...
 C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f3xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
@@ -48,15 +54,27 @@ C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/
                                   ^~
 3 warnings generated.
 compiling system_stm32f3xx.c...
-pll.c(3): warning: In file included from...
+ws2812b.c(3): warning: In file included from...
 C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
   SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
                                   ^~
 1 warning generated.
-compiling pll.c...
+compiling ws2812b.c...
+main.c(2): warning: In file included from...
+C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+main.c(18): warning: // comments are not allowed in this language [-Wcomment]
+                //WS2812B_Data_Bit(0);
+                ^
+main.c(10): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t i;
+                 ^
+3 warnings generated.
+compiling main.c...
 linking...
-Program Size: Code=700 RO-data=420 RW-data=0 ZI-data=1632  
-".\Objects\stm32f303re_ws2812_rgb.axf" - 0 Error(s), 5 Warning(s).
+Program Size: Code=1260 RO-data=420 RW-data=0 ZI-data=1632  
+".\Objects\stm32f303re_ws2812_rgb.axf" - 0 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -86,7 +104,7 @@ Package Vendor: Keil
       Source file:   Drivers/CMSIS/Device/ST/STM32F3xx/Source/Templates/arm/startup_stm32f303xe.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F3xx/Source/Templates/system_stm32f3xx.c
       Source file:   MDK/Device/Source/ARM/STM32F3xx_OPT.s
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
