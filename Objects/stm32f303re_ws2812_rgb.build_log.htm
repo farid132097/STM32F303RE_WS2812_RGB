@@ -28,18 +28,6 @@ Project File Date:  12/30/2023
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
 assembling startup_stm32f303xe.s...
-tim17.c(2): warning: In file included from...
-C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
-  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
-                                  ^~
-tim17.c(5): warning: no previous extern declaration for non-static variable 'clk_counter' [-Wmissing-variable-declarations]
-uint16_t clk_counter=0;
-         ^
-tim17.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint16_t clk_counter=0;
-^
-2 warnings generated.
-compiling tim17.c...
 RTE/Device/STM32F303RETx/system_stm32f3xx.c(70): warning: In file included from...
 C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f3xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
@@ -54,12 +42,6 @@ C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/
                                   ^~
 3 warnings generated.
 compiling system_stm32f3xx.c...
-pll.c(3): warning: In file included from...
-C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
-  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
-                                  ^~
-1 warning generated.
-compiling pll.c...
 main.c(2): warning: In file included from...
 C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
   SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
@@ -102,12 +84,30 @@ uint8_t  red_dir=0, green_dir=0, blue_dir=0;
 ^
 7 warnings generated.
 compiling main.c...
+tim17.c(2): warning: In file included from...
+C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+tim17.c(5): warning: no previous extern declaration for non-static variable 'clk_counter' [-Wmissing-variable-declarations]
+uint16_t clk_counter=0;
+         ^
+tim17.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t clk_counter=0;
+^
+2 warnings generated.
+compiling tim17.c...
+pll.c(3): warning: In file included from...
+C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+1 warning generated.
+compiling pll.c...
 ws2812b.c(3): warning: In file included from...
 C:/Users/EED-R&I/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
   SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
                                   ^~
 ws2812b.c(223): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
-        for(uint32_t i=0;i<20000;i++){
+        for(uint32_t i=0;i<40000;i++){
             ^
 ws2812b.c(223): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
 ws2812b.c(232): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
@@ -117,7 +117,7 @@ ws2812b.c(232): warning: GCC does not allow variable declarations in for loop in
 5 warnings generated.
 compiling ws2812b.c...
 linking...
-Program Size: Code=2616 RO-data=420 RW-data=0 ZI-data=1640  
+Program Size: Code=2584 RO-data=420 RW-data=0 ZI-data=1640  
 ".\Objects\stm32f303re_ws2812_rgb.axf" - 0 Error(s), 18 Warning(s).
 
 <h2>Software Packages used:</h2>

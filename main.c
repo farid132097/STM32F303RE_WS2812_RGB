@@ -34,6 +34,9 @@ int main(void){
 		WS2812B_Send_Pixel(red,green,blue);
 		WS2812B_Send_Pixel(red,green,blue);
 		WS2812B_Send_Pixel(red,green,blue);
+		WS2812B_Send_Pixel(red,green,blue);
+		WS2812B_Send_Pixel(red,green,blue);
+		WS2812B_Send_Pixel(red,green,blue);
 		WS2812B_Pixel_Delay();
 		
 		
@@ -88,16 +91,16 @@ int main(void){
 		}
 		
 		else if((red == 0  ) && (green == GREEN_MAX) && (blue == BLUE_MAX)){
-			red_dir   = HALT;
+			red_dir   = UPCOUNT;
 			green_dir = DOWNCOUNT;
 			blue_dir  = HALT;
 		}
 		
-		else if((red == 0  ) && (green == 0) && (blue == BLUE_MAX)){
+		/*else if((red == 0  ) && (green == 0) && (blue == BLUE_MAX)){
 			red_dir   = UPCOUNT;
 			green_dir = HALT;
 			blue_dir  = HALT;
-		}
+		}*/
 		
 		else if((red == RED_MAX) && (green == 0) && (blue == BLUE_MAX)){
 			red_dir   = HALT;

@@ -220,7 +220,7 @@ void WS2812B_Send_Pixel(uint8_t r, uint8_t g, uint8_t b){
 }
 
 void WS2812B_Pixel_Delay(void){
-	for(uint32_t i=0;i<20000;i++){
+	for(uint32_t i=0;i<40000;i++){
 		__NOP();
 	}
 }
