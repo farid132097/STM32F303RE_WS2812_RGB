@@ -23,18 +23,19 @@ void PLL_Clear_PLLON(void){
 	while((RCC->CR & RCC_CR_PLLRDY) != 0){}
 }
 
-void PLL_PLLSRC_Set_HSIDIV2(void){
+void PLL_PLLSRC_Set_HSI(void){
 	RCC->CFGR &=~ RCC_CFGR_PLLSRC_Msk;
-}
-
-void PLL_PLLMUL_Set_x12(void){
-	RCC->CFGR &=~ RCC_CFGR_PLLMUL_Msk;
-	RCC->CFGR |= RCC_CFGR_PLLMUL12;
+	RCC->CFGR |= RCC_CFGR_PLLSRC_HSI_PREDIV;
 }
 
 void PLL_Prescale_APB1(void){
 	RCC->CFGR &=~RCC_CFGR_PPRE1_Msk;
 	RCC->CFGR |= RCC_CFGR_PPRE1_DIV2;
+}
+
+void PLL_Set_PLLMUL(void){
+	RCC->CFGR &=~ RCC_CFGR_PLLMUL_Msk;
+	RCC->CFGR |= RCC_CFGR_PLLMUL9;
 }
 
 void PLL_Wait_To_Stabilize(void){
@@ -43,17 +44,18 @@ void PLL_Wait_To_Stabilize(void){
 }
 
 void PLL_Set_SysClk_PLL(void){
-	RCC->CFGR &=~ RCC_CFGR_SW_Msk;
 	RCC->CFGR |= RCC_CFGR_SW_PLL;
 	while((RCC->CFGR & RCC_CFGR_SWS_Msk) != RCC_CFGR_SWS_PLL){}
 }
 
-void PLL_Set_48MHz(void){
+void PLL_Set_72MHz(void){
 	PLL_Set_SysClk_HSI();
   PLL_Clear_PLLON();
-  PLL_PLLSRC_Set_HSIDIV2();
-  PLL_PLLMUL_Set_x12();
+	FLASH->ACR=FLASH_ACR_LATENCY_1|FLASH_ACR_PRFTBE;
+	
+  PLL_PLLSRC_Set_HSI();
 	PLL_Prescale_APB1();
+  PLL_Set_PLLMUL();
   PLL_Wait_To_Stabilize();
   PLL_Set_SysClk_PLL();
 }
